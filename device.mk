@@ -22,7 +22,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/teracube/2e
-PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
 
 # Copy fstab to ramdisk
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/rootdir/etc/fstab.mt6762:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6762
@@ -42,7 +41,6 @@ $(call inherit-product, device/mediatek/common/device.mk)
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 TARGET_PROVIDES_MEDIATEK_IMS_STACK := true
 TARGET_PROVIDES_MTK_PROPRIETARY := true
-TARGET_USES_MEDIATEK_CHIPSET := true
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -127,10 +125,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
