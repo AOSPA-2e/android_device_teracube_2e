@@ -75,6 +75,8 @@ ro.config.media_vol_default = 12
 ro.config.alarm_vol_default = 12
 ro.config.system_vol_default = 12
 ro.config.ring_vol_default = 12
+
+# Disable servicetracker
+sys.vendor.qti.servicetracker.disable=true
 # end of device/mediatek/system/common/system.prop
 
-#
